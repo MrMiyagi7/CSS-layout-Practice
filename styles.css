@@ -21,3 +21,89 @@ body {
 img {
     display: block;
 }
+
+
+.btn {
+    display: inline-block;
+    background: #EFEFEF;
+    border: none;
+    color: #000000;
+    padding: 7px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+/* Profile */
+
+.profile-image {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    float: left;
+    margin-right: 4rem;
+    width: calc(33% - 2rem);
+}
+
+.profile-image img {
+    border-radius: 50%;
+}
+
+.profile-user-settings,
+.profile-stats,
+.profile-bio {
+    float: left;
+    width: calc(66.666% - 2rem);
+}
+
+.profile-user-settings {
+    margin-top: 1rem;
+
+}
+
+.profile-user-name{
+display: inline-block;
+font-size: 2rem;
+font-weight: 300;
+}
+
+
+.profile-stats li {
+    display: inline-block;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1.7;
+    margin-right: 5rem;
+}
+
+.profile-edit-btn {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
+.profile-edit-btn:hover {
+    background: #DBDBDB;
+
+
+}
+
+.profile-settings-btn {
+    background: transparent;
+    font-size: 1.2rem;
+
+}
+
+.profile-bio {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    line-height: 1.5;
+
+}
+.profile-stats li:last-of-type {
+    margin-right: 0;
+}
+
+.profile-edit-btn, .profile-real-name, .profile-stat-count {
+    font-size: 700; !important 
+}
