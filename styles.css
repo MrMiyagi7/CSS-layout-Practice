@@ -22,6 +22,12 @@ img {
     display: block;
 }
 
+.container {
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 85rem;
+}
+
 
 .btn {
     display: inline-block;
@@ -47,10 +53,10 @@ img {
 
 .profile-image img {
     border-radius: 50%;
+    width: 200px;
 }
 
 .profile-user-settings,
-.profile-stats,
 .profile-bio {
     float: left;
     width: calc(66.666% - 2rem);
@@ -63,7 +69,7 @@ img {
 
 .profile-user-name{
 display: inline-block;
-font-size: 2rem;
+font-size: 2.3rem;
 font-weight: 300;
 }
 
@@ -72,13 +78,15 @@ font-weight: 300;
     display: inline-block;
     font-size: 2rem;
     cursor: pointer;
-    line-height: 1.7;
-    margin-right: 5rem;
+    line-height: 1.4;
+    margin-right: 5rem; 
+    margin-top: 1.5rem;
+
 }
 
 .profile-edit-btn {
     margin-left: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .profile-edit-btn:hover {
@@ -89,21 +97,88 @@ font-weight: 300;
 
 .profile-settings-btn {
     background: transparent;
-    font-size: 1.2rem;
+    font-size: 2rem;
 
 }
 
 .profile-bio {
     font-size: 1.5rem;
     font-weight: 400;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     line-height: 1.5;
 
 }
 .profile-stats li:last-of-type {
     margin-right: 0;
 }
+.profile-edit-btn, .profile-real-name, .profile-stat-count{
+    font-weight: 700;
+}
 
-.profile-edit-btn, .profile-real-name, .profile-stat-count {
-    font-size: 700; !important 
+
+/* Gallery */
+
+.gallery {
+    display: inline-grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 225px 225px;
+    grid-gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    max-height: 225px;
+}
+
+.gallery-item{ 
+    position: relative;
+    color: #fff;
+    flex: 1 0 0 20rem; 
+    cursor: pointer;
+    font-size: 1.7rem;
+    
+}
+
+.gallery-item-info {
+    display: none;
+}
+
+.gallery-item-info ul  {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    display: inline-block;   
+}
+.gallery-item-info li {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.gallery-item:hover .gallery-item-info,
+.gallery-item:focus .gallery-item-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.visually-hidden{
+    display: none;
+
+}
+
+.gallery-item-type {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    margin: 0.5rem 0.5rem;
+    font-size: 2rem;
+    text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
 }
