@@ -46,9 +46,9 @@ img {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    float: left;
+    float: left; /* FLoat used for positioning element */
     margin-right: 4rem;
-    width: calc(33% - 2rem);
+    width: calc(33% - 2rem);  /* Calculates a third of the width of the screen*/
 }
 
 .profile-image img {
@@ -59,7 +59,7 @@ img {
 .profile-user-settings,
 .profile-bio {
     float: left;
-    width: calc(66.666% - 2rem);
+    width: calc(66.666% - 2rem); /* Calculates a two thirds of the width of the screen*/
 }
 
 .profile-user-settings {
@@ -108,7 +108,7 @@ font-weight: 300;
     line-height: 1.5;
 
 }
-.profile-stats li:last-of-type {
+.profile-stats li:last-of-type { /* Targets last list element in unordered list*/
     margin-right: 0;
 }
 .profile-edit-btn, .profile-real-name, .profile-stat-count{
@@ -119,10 +119,10 @@ font-weight: 300;
 /* Gallery */
 
 .gallery {
-    display: inline-grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: 225px 225px;
-    grid-gap: 1.5rem;
+    display: inline-grid; /* Initialises the gird which all elements inside gallery will be affected by grid properties*/
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Sets the number of column with in the grid*/
+    grid-template-rows: 225px 225px; /* Sets the row width and height of the grid*/
+    grid-gap: 1.5rem; /* Adds a gap between grid elements*/
     margin-top: 2.5rem;
 }
 
@@ -158,7 +158,7 @@ font-weight: 300;
 }
 
 .gallery-item:hover .gallery-item-info,
-.gallery-item:focus .gallery-item-info {
+.gallery-item:focus .gallery-item-info { /* Selector that targets galarey items and gallery info when hovered on or clicked on */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,7 +170,7 @@ font-weight: 300;
 }
 
 .visually-hidden{
-    display: none;
+    display: none; /* Hides information that is not meant to be seen by the user*/
 
 }
 
@@ -180,7 +180,7 @@ font-weight: 300;
     right: 0%;
     margin: 0.5rem 0.5rem;
     font-size: 2rem;
-    text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+    text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1); /* Adds a slight shadow to text for readability purposes*/
 }
 
 .loader {
@@ -190,7 +190,7 @@ font-weight: 300;
     border-radius: 50%;
     border: 0.5rem solid #999999;
     border-bottom-color: transparent;
-    animation: loading-wheel 0.8s linear infinite;
+    animation: loading-wheel 0.8s linear infinite; /* Defines how the animation should play by setting its values*/
 
 }
 
@@ -204,7 +204,7 @@ font-weight: 300;
 
 /* Media Query */
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 40rem) {  /* Allows for changes to be made to the layout if the display is under a certain size*/
     .profile {
         display: flex;
         flex-wrap: wrap;
@@ -228,21 +228,22 @@ font-weight: 300;
     }
 
     .profile-stats{
-        order: 1;
+        order: 1; /*Changes the order inj which the element sits within a flex container*/
        
     
     }
     .profile-stats, 
     .profile-bio
     .profile-user-settings{
-        flex-basis: 100%;
+        flex-basis: 100%; /*Sets the initial length of a flexible element*/
     }
 
     .profile-stats ul{
+        display: flex;
         border-top: 0.1rem solid #999999 ;
         border-bottom: 0.1rem solid #999999 ;
         text-align: center;
-        display: flex;
+        
 
     }
     .profile-stats li {
@@ -285,7 +286,6 @@ font-weight: 300;
 
     .gallery-item-info li {
         font-size: 1rem;
-        display: inline;
         margin-right: 1rem;
     }
 
