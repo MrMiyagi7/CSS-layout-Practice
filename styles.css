@@ -182,3 +182,113 @@ font-weight: 300;
     font-size: 2rem;
     text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
 }
+
+.loader {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin: 1.5rem auto;
+    border-radius: 50%;
+    border: 0.5rem solid #999999;
+    border-bottom-color: transparent;
+    animation: loading-wheel 0.8s linear infinite;
+
+}
+
+/* Animations */
+
+@keyframes loading-wheel {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media Query */
+
+@media screen and (max-width: 40rem) {
+    .profile {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0.5rem 2.8rem;
+    }
+
+    .profile-image,
+    .profile-bio
+    .profile-user-settings 
+     {
+        float: none;
+        width: auto;
+    }
+
+    .profile-image img {
+        width: 9rem;
+    }
+
+    .profile-user-name {
+        font-size: 2rem;
+    }
+
+    .profile-stats{
+        order: 1;
+       
+    
+    }
+    .profile-stats, 
+    .profile-bio
+    .profile-user-settings{
+        flex-basis: 100%;
+    }
+
+    .profile-stats ul{
+        border-top: 0.1rem solid #999999 ;
+        border-bottom: 0.1rem solid #999999 ;
+        text-align: center;
+        display: flex;
+
+    }
+    .profile-stats li {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        margin-bottom: 1.5rem;
+        
+    }
+
+    .profile-user-settings{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+   
+
+    .profile-edit-btn {
+        order: 1;
+        text-align: center;
+        padding: 0.2rem 0.2rem;
+        font-size: 1rem;
+        
+
+        
+    }
+
+    .profile-bio {
+        font-size: 1.2rem;
+    }
+
+    
+
+    .profile-image,
+    .profile-user-settings 
+    .profile-bio,
+    .profile-stats {
+        float: none;
+        width: auto;
+    } 
+
+    .gallery-item-info li {
+        font-size: 1rem;
+        display: inline;
+        margin-right: 1rem;
+    }
+
+
+
+}
